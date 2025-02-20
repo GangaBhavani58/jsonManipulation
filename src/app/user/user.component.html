@@ -6,28 +6,60 @@
 </div>
 
 <div *ngIf="showSize">
-  <h3>Size</h3>
+  <h3>
+    Size
+    <span
+      class="cursor-pointer text-primary fw-bold"
+      style="cursor: pointer"
+      (click)="showSize = false"
+      >&times;</span
+    >
+  </h3>
   <div *ngFor="let ele of sizeData">
     <p>{{ ele }}</p>
   </div>
 </div>
 
 <div *ngIf="showRAM">
-  <h3>RAM</h3>
+  <h3>
+    RAM
+    <span
+      class="cursor-pointer text-primary fw-bold"
+      style="cursor: pointer"
+      (click)="showRAM = false"
+      >&times;</span
+    >
+  </h3>
   <div *ngFor="let val of RAMData">
     <button (click)="handleEvent(val)">{{ val }}</button>
   </div>
 </div>
 
 <div *ngIf="showDisk">
-  <h3>Disk</h3>
+  <h3>
+    Disk
+    <span
+      class="cursor-pointer text-primary fw-bold"
+      style="cursor: pointer"
+      (click)="showDisk = false"
+      >&times;</span
+    >
+  </h3>
   <div *ngFor="let ref of diskData">
     <button (click)="handleEvent(ref)">{{ ref }}</button>
   </div>
 </div>
 
 <div *ngIf="showColor">
-  <h3>Color</h3>
+  <h3>
+    Color
+    <span
+      class="cursor-pointer text-primary fw-bold"
+      style="cursor: pointer"
+      (click)="showColor = false"
+      >&times;</span
+    >
+  </h3>
   <div *ngFor="let color of colorData">
     <p>{{ color }}</p>
   </div>
