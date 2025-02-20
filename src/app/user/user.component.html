@@ -1,0 +1,34 @@
+<div>
+  <h3>Color/Camera</h3>
+  <div *ngFor="let item of initData">
+    <button (click)="handleEvent(item)">{{ item }}</button>
+  </div>
+</div>
+
+<div *ngIf="showSize">
+  <h3>Size</h3>
+  <div *ngFor="let ele of sizeData">
+    <p>{{ ele }}</p>
+  </div>
+</div>
+
+<div *ngIf="showRAM">
+  <h3>RAM</h3>
+  <div *ngFor="let val of RAMData">
+    <button (click)="handleEvent(val)">{{ val }}</button>
+  </div>
+</div>
+
+<div *ngIf="showDisk">
+  <h3>Disk</h3>
+  <div *ngFor="let ref of diskData">
+    <button (click)="handleEvent(ref)">{{ ref }}</button>
+  </div>
+</div>
+
+<div *ngIf="showColor">
+  <h3>Color</h3>
+  <div *ngFor="let color of colorData">
+    <p>{{ color }}</p>
+  </div>
+</div>
